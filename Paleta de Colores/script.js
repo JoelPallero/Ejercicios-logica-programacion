@@ -20,3 +20,4 @@ function colorHEX(){
 	}
 	contenedor.style.backgroundColor = `#${colorFinal}`;
 }
+
