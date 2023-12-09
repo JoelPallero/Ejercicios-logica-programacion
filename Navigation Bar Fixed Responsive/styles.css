@@ -240,15 +240,15 @@ nav{
         padding: 0;
         background: transparent;
     }
-    .social-icons{
+    .social-icons {
         display: flex;
     }
-    .social-icon a{
+    .social-icons a {
         margin: 0 0.5rem;
         color: var(--clr-primary-5);
         transition: var(--transition);
     }
-    .social-icon a:hover{
+    .social-icons a:hover {
         color: var(--clr-primary-7);
     }
 }
