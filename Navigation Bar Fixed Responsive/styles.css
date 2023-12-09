@@ -199,19 +199,18 @@ nav{
 .social-icons{
     display: none;
 }
+
+
 .links{
     height: 0;
     overflow: hidden;
     transition: var(--transition);
 }
 
+/* Toggle class */
 .show-menu{
-    overflow: visible;
-    transition: all .5s linear;
-}
-
-.show-link{
     height: 10rem;
+    transition: var(--transition)
 }
 
 @media screen and (min-width: 800px){
