@@ -31,7 +31,7 @@ function App() {
         <button onClick={handleClick}>Start FizzBuzz</button>
         <p>
           {results.map((result, index) => (
-            <span key={index}>{result}<br /></span>
+            <span key={index}>{result}<br/></span>
           ))}
         </p>
       </div>
