@@ -14,7 +14,7 @@
     <section>
         <?php
             for($i = 1; $i <= 100; $i++){
-                if($i % 3 == 0 && $i % 5 == 0){
+                if($i % 3 === 0 && $i % 5 === 0){
                     echo "<span> FizzBuzz </span>";
                 }else if($i % 5 == 0){
                     echo "<span> Buzz </span>";
