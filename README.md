@@ -1,11 +1,9 @@
-# Ejercicios hechos en:
-Javascript (vite)
+# 100 Ejercicios de lógica de programación, resueltos en 3 penguajes:
+Javascript (vite)<br>
+React (vite)<br>
+PHP<br>
 #
-React (vite)
-# 
-PHP
-#
-Desde lo básico hasta ejercicios avanzados.
-Cada ejercicio está enumerado
-Los ejercicios son sacados de:
-https://retosdeprogramacion.com/ejercicios
+Desde lo básico hasta ejercicios avanzados.<br>
+Los ejercicios son toados de los desafíos de:<br>
+https://retosdeprogramacion.com/ejercicios<br>
+<br>
