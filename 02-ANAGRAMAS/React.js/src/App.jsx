@@ -1,33 +1,52 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import useAnagramState from './hooks/useAnagramasState';
+import sonAnagramas from './hooks/sonAnagramas.js'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { mainString, setMainString, secString, setSecString, error, setError, success, setSuccess, result, setResult } = useAnagramState();
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    sonAnagramas(mainString, secString, setError, setSuccess, setResult);
+  }
+    
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <form id="form" onSubmit={handleSubmit}>
+
+          {
+            result ? <span className="success-span"> <strong>Respuesta</strong>: {success}</span> 
+            : error ? <span className="error-span"> <strong>Respuesta</strong>: {error}</span> : null
+          }
+
+
+          <label for="mainString">
+              Ingresar una palabra
+              <input 
+                type="text" 
+                name="mainString"
+                value={mainString}
+                onChange={ e => {setMainString(e.target.value)}}
+              />
+          </label>          
+
+          <label for="secondString">
+              Ingresar otra palabra
+              <input 
+                type="text" 
+                name="secondString"
+                value={secString}
+                onChange={e => setSecString(e.target.value)}
+              />
+          </label>
+
+          <button type="submit" name="buttonAnagrama" id="buttonAnagrama">Verificar si son anagramas</button>
+      </form>
+
     </>
   )
 }
